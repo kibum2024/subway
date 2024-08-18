@@ -1,5 +1,6 @@
 package com.react.subway.user;
 
+import ch.qos.logback.core.boolex.Matcher;
 import com.react.subway.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,17 @@ public class UserService {
 
     public User save(User user) {
         return userRepository.save(user);
+    }
+
+    public boolean checkUserCredentials(String userEmail, String userPassword) {
+        Matcher passwordEncoder;
+        return userRepository.findByUserEmail(userEmail)
+                .map(user -> user.getUserPassword().equals(userPassword))
+                .orElse(false);
+    }
+
+    public boolean checkUserCredentials(String userEmail) {
+        Matcher passwordEncoder;
+        return userRepository.findByUserEmail(userEmail).isPresent();
     }
 }

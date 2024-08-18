@@ -1,0 +1,143 @@
+.header-wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-top: 5px solid #009223;
+  height: 165px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 5px 0px 0px 0px;
+  min-width: 1280px;
+  margin: 0 auto;
+}
+.header-title-wrap {
+  position: relative;
+  height: 120px;
+  }
+
+.header-logo {
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  margin-left: -101px;
+  transition-duration: 0.3s
+}
+
+.header-logo a {
+  display: block;
+  background: url(../../image/logo_w.png) 0 0 no-repeat;
+  width: 202px;
+  height: 40px;
+  overflow: hidden;
+  font-size: 0px;
+  line-height: 0px;
+  text-indent: -9999px;
+}
+
+.header-util-menu {     
+  position: absolute;
+  right: 175px;
+  top: 40px;
+}
+
+.header-util-menu ul li {
+  float: left;
+  position: relative;
+}
+
+.header-util-menu ul li~li {
+  margin-left: 30px;
+}
+
+.header-util-menu ul li a {
+  display: block;
+  color: #666666;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 30px;
+  height: 30px;
+}
+
+.header-before::before {
+  background-color: #ddd;
+  content: '';
+  display: block;
+  border-radius: 50px;
+  position: absolute;
+  left: -16px;
+  top: 50%;
+  margin-top: -2px;
+  height: 3px;
+  width: 3px;
+}
+
+.bi-globe, .bi-bag {
+  font-size: 20px;
+  font-weight: bold;
+}
+.showpping-cart {
+  width: 30px;
+  background: url(../../image/icon_utill_cart.png) 0 0 no-repeat;
+}
+.global-subway {
+  width: 30px;
+  background: url(../../image/icon_utill_global.png) 0 0 no-repeat;
+}
+
+.header-main-menu {
+  position: relative;
+  width: 990px;
+  margin: 0 auto;
+}
+
+.header-main-menu>ul {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: start;
+  justify-content: center;
+}
+
+.header-main-menu>ul>li {
+  width: 165px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+}
+
+.header-main-menu>ul>li:hover {
+  color: #009223;
+}
+
+.header-sub-menu {
+  height: 105px;
+  opacity: 0;
+  top: -20px;
+}
+
+.header-sub-menu>ul {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 0.5px solid #efebeb;
+}
+
+.header-sub-menu>ul>li {
+  width: 165px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  color: black;
+  cursor: pointer;
+  margin: 10px 0px;
+}
+
+.header-sub-menu>ul>li:hover {
+  color: #009223;
+  text-decoration: underline;
+}
