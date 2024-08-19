@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './MembershipStep01.css';
+import 'src/components/main/MembershipStep01.css';
 
 const MembershipStep01 = () => {
   const navigate = useNavigate();

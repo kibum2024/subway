@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './MembershipStep02.css';
+import 'src/components/main/MembershipStep02.css';
 
 const MembershipStep02 = () => {
   const navigate = useNavigate();

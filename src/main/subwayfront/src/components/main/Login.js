@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
 // import CryptoJS from 'crypto-js';
 import axios from 'axios';
-import { AuthContext } from '../../AuthContext';
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
+import { AuthContext } from 'src/AuthContext';
+import 'src/components/main/Login.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
