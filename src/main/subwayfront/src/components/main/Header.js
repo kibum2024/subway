@@ -47,6 +47,7 @@ const Header = () => {
   };
 
   const handleSubMenuClick = (menuUrl) => {
+    setVisibleIndex(-1);
     navigate(menuUrl);
   };
 

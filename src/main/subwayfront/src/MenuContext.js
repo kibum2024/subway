@@ -10,7 +10,7 @@ export function MenuProvider({ children }) {
     };
 
     return (
-        <MenuContext.Provider value={{ menuItems, setMenuItems }}>
+        <MenuContext.Provider value={{ menuItems, contextMenu }}>
             {children}
         </MenuContext.Provider>
     );

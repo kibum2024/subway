@@ -137,36 +137,3 @@
   color: #009223;
   text-decoration: underline;
 }
-
-.header-sub-title {
-  width: 100%;
-  position: relative;
-  /* top: 170px; */
-}
-.header-sub-title-menu> ul {
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  height: 60px;
-}
-
-.header-sub-title-menu> ul> li {
-  width: auto;
-  height: 60px;
-  line-height: 60px;
-}
-
-.header-sub-title-menu> ul li + li:after {
-  /* position: absolute; */
-  content: '';
-  width: 5px;
-  height: 5px;
-  background-color: red;
-  /* background-color: #dddddd; */
-  border-radius: 50%;
-  /* left: 0;
-  top: 28px; */
-}
