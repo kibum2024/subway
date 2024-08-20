@@ -49,59 +49,67 @@
 .rap-img01 {
   position: absolute;
   top: 72px;
-  right: 10%;
+  right: -90px;
+  width: 416px;
+  height: 308px;
 }
 
 .rap-img02 {
   position: absolute;
   top: 0px;
-  left: 10%;
+  left: -150px;
+  width: 670px;
+  height: 203px;
 }
 
 .salad-img01 {
   position: absolute;
   top: 0px;
-  right: 10%;
+  right: -90px;
 }
 
 .salad-img02 {
   position: absolute;
   top: 0px;
-  left: 10%;
+  left: -150px;
 }
 
 .morning-img01 {
   position: absolute;
-  top: 0px;
-  right: 10%;
+  top: 80px;
+  right: -120px;
+  width: 508px;
+  height: 549px;
 }
 
 .morning-img02 {
   position: absolute;
-  top: 0px;
-  left: 10%;
+  top: -150px;
+  left: -50px;
+  width: 342px;
+  height: 494px;
 }
 
 .smilesup-img01 {
   position: absolute;
   top: 72px;
-  right: 10%;
+  right: -100px;
 }
 
 .smilesup-img02 {
   position: absolute;
   top: 0px;
-  left: 10%;
+  left: -100px;
 }
 
 .catering-img01 {
   position: absolute;
   top: 60px;
-  right: 10%;
+  right: -100px;
 }
 
 .catering-img02 {
   position: absolute;
   top: 0px;
-  left: 10%;
+  left: -100px;
 }

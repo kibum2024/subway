@@ -10,8 +10,6 @@ import MembershipStep03 from 'src/components/main/MembershipStep03';
 import MembershipStep04 from 'src/components/main/MembershipStep04';
 import Home from 'src/components/content/home/Home';
 import MenuMain from 'src/components/content/menu/MenuMain';
-import MenuSandwich from 'src/components/content/menu/MenuSandwich';
-import MenuRap from 'src/components/content/menu/MenuRap';
 import 'src/App.css';
 
 function Main() {
