@@ -1,21 +1,14 @@
-.sandwich-wrap {
+.rap-wrap {
   width: 100%;
   position: relative;
 }
 
-.sandwich-main-img img {
-  flex-shrink: 1; 
-  max-width: 100%;
-  height: auto;
-}
-
-.sandwich-main-message {
+.rap-main-message {
   width: 100%;
   position: absolute;
   top: -10px;
 }
-
-.sandwich-main-message h2 {
+.rap-main-message h2 {
   font-size: 70px;
   font-weight: bold;
   text-align: center;
@@ -25,7 +18,7 @@
   z-index: 9;
 }
 
-.sandwich-main-message p {
+.rap-main-message p {
   font-size: 16px;
   font-weight: bold;
   text-align: center;

@@ -91,8 +91,18 @@ import menu090 from 'src/image/menu/menu090.jpg';
 import menu091 from 'src/image/menu/menu091.jpg';
 import menu092 from 'src/image/menu/menu092.jpg';
 import menu093 from 'src/image/menu/menu093.jpg';
-import sandwichMmain from 'src/image/menu/sandwich_main.jpg';
-
+import sandwichMain from 'src/image/menu/sandwich_main.jpg';
+import wrapMain01 from 'src/image/menu/wrap_main01.jpg';
+import wrapMain02 from 'src/image/menu/wrap_main02.jpg';
+import saladMain01 from 'src/image/menu/salad_main01.jpg';
+import saladMain02 from 'src/image/menu/salad_main02.jpg';
+import morningMain01 from 'src/image/menu/morning_main01.jpg';
+import morningMain02 from 'src/image/menu/morning_main02.jpg';
+import smilesupMain01 from 'src/image/menu/smilesup_main01.png';
+import smilesupMain02 from 'src/image/menu/smilesup_main02.png';
+import cateringMain01 from 'src/image/menu/catering_main01.png';
+import cateringMain02 from 'src/image/menu/catering_main02.png';
+import bgTabBox from 'src/image/menu/bg_tabbox.png';
 
 export { 
   menu001,
@@ -188,5 +198,16 @@ export {
   menu091,
   menu092,
   menu093,
-  sandwichMmain
+  sandwichMain,
+  wrapMain01,
+  wrapMain02,
+  saladMain01,
+  saladMain02,
+  morningMain01,
+  morningMain02,
+  smilesupMain01,
+  smilesupMain02,
+  cateringMain01,
+  cateringMain02,
+  bgTabBox
 };

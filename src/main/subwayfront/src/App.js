@@ -9,7 +9,9 @@ import MembershipStep02 from 'src/components/main/MembershipStep02';
 import MembershipStep03 from 'src/components/main/MembershipStep03';
 import MembershipStep04 from 'src/components/main/MembershipStep04';
 import Home from 'src/components/content/home/Home';
+import MenuMain from 'src/components/content/menu/MenuMain';
 import MenuSandwich from 'src/components/content/menu/MenuSandwich';
+import MenuRap from 'src/components/content/menu/MenuRap';
 import 'src/App.css';
 
 function Main() {
@@ -30,7 +32,17 @@ function Main() {
                 <Route path="/users/membershipstep03" element={<MembershipStep03 />} ></Route> 
                 <Route path="/users/membershipstep04" element={<MembershipStep04 />} ></Route> 
                 <Route path="/content/home" element={<Home />} ></Route> 
-                <Route path="/menu/sandwich" element={<MenuSandwich />} ></Route> 
+                <Route path="/menu/sandwich" element={<MenuMain pathProp = {"/menu/sandwich" }/>} ></Route> 
+                <Route path="/menu/rap" element={<MenuMain pathProp = {"/menu/rap" }/>} ></Route> 
+                <Route path="/menu/salad" element={<MenuMain pathProp = {"/menu/salad" }/>} ></Route> 
+                <Route path="/menu/morning" element={<MenuMain pathProp = {"/menu/morning" }/>} ></Route> 
+                <Route path="/menu/smilesup" element={<MenuMain pathProp = {"/menu/smilesup" }/>} ></Route> 
+                <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
+
+
+                {/* <Route path="/menu/main" element={<MenuMain />} ></Route>  */}
+                {/* <Route path="/menu/rap" element={<MenuRap />} ></Route>  */}
+
                 {/* <Route path="/home" element={<MainContent />} ></Route> 
                 <Route path="/brandstory" element={<BrandStory stateProp ={true}/>} >
                   <Route path="story" element={<Story />} />

@@ -5,10 +5,11 @@
 }
 
 .sub-menu-title {
-  border-bottom: 0.1px solid #c5c5b0;
+  border-bottom: 0.1px solid transparent;
   background-color: transparent;
 }
 .sub-menu-title ul {
+  width: auto;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
@@ -26,6 +27,7 @@
   color: white;
   cursor: pointer;
   text-align: center;
+  z-index: 10;
 }
 
 .sub-menu-title ul li + li::before {
