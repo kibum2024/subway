@@ -3,7 +3,7 @@
 
 /* 스크롤바의 너비와 높이 */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 10px;
   /* 수직 스크롤바의 너비 */
   height: 5px;
   /* 수평 스크롤바의 높이 */

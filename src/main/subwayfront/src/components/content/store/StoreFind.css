@@ -1,0 +1,52 @@
+.store-wrap {
+  width: 100%;
+  position: relative;
+}
+
+.store-main {
+  height: 60px;
+  background-color: #009223;
+}
+
+.store-map {
+  width: 100%;
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.store-find {
+  position: absolute;
+  left: 20px;
+  top: 80px;
+  z-index: 999;
+  width: 340px;
+  height: 658px;
+  padding: 0 29px;
+  background-color: #fff;
+  border: 1px solid #dddddd;
+}
+
+.store-find h2 {
+  color: #292929;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  padding: 34px 0 17px 0;
+}
+
+.store-find input {
+  height: 41px;
+  width: 100%;
+  text-indent: 14px;
+  color: #292929;
+  font-size: 16px;
+  border: 2px solid #dddddd
+}
+
+.store-find p {
+  padding: 0 0 0 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -.5px;
+  text-indent: -10px;
+}

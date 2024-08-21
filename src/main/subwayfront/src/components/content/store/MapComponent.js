@@ -18,7 +18,7 @@ const customIcon = new L.Icon({
 
 const MapComponent = () => {
   return (
-    <MapContainer center={position} zoom={13} style={{ height: "700px", width: "100%" }}>
+    <MapContainer center={position} zoom={17} zoomControl={false} style={{ height: "700px", width: "100%" }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

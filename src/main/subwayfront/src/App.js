@@ -38,7 +38,7 @@ function Main() {
                 <Route path="/menu/smilesup" element={<MenuMain pathProp = {"/menu/smilesup" }/>} ></Route> 
                 <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
 
-                <Route path="/story/storefind" element={<StoreFind pathProp = {"/menu/catering" }/>} ></Route> 
+                <Route path="/story/storefind" element={<StoreFind pathProp = {"/story/storefind" }/>} ></Route> 
 
 
                 {/* <Route path="/menu/main" element={<MenuMain />} ></Route>  */}
