@@ -103,6 +103,7 @@ import smilesupMain02 from 'src/image/menu/smilesup_main02.png';
 import cateringMain01 from 'src/image/menu/catering_main01.png';
 import cateringMain02 from 'src/image/menu/catering_main02.png';
 import bgTabBox from 'src/image/menu/bg_tabbox.png';
+import btnMore from 'src/image/menu/btn_more.png';
 
 export { 
   menu001,
@@ -209,5 +210,6 @@ export {
   smilesupMain02,
   cateringMain01,
   cateringMain02,
-  bgTabBox
+  bgTabBox,
+  btnMore
 };

@@ -1,15 +1,13 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { MenuContext } from 'src/MenuContext';
 import 'src/components/content/common/SubMenu.css';
 
-const SubMenu = ({ subMenuProp, subPathProp }) => {
+const SubMenu = ({ subMenuProp, subPathProp, menuUrlProp }) => {
   const navigate = useNavigate();
   const { menuItems } = useContext(MenuContext);
-  const [subPath, setSubPath] = useState(subPathProp);
 
   const handleSubmenuClick = (menuUrl) => {
-    setSubPath(menuUrl);
     navigate(menuUrl);
   }
 
@@ -19,7 +17,7 @@ const SubMenu = ({ subMenuProp, subPathProp }) => {
         <ul>
           {menuItems.filter(menuItem => menuItem.menuLargeCategory === subMenuProp && menuItem.menuSmallCategory === 'sub')
                     .map((menuItem, index) => (
-                      <li key={index} className={`${menuItem.menuUrl === subPath? 'active' : ''}`} onClick={() =>handleSubmenuClick(menuItem.menuUrl)}>{menuItem.menuName}</li>
+                      <li key={index} className={`${menuItem.menuUrl === menuUrlProp? 'active' : ''}`} onClick={() =>handleSubmenuClick(menuItem.menuUrl)}>{menuItem.menuName}</li>
                     ))
           }
         </ul>

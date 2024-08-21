@@ -16,11 +16,14 @@ const MenuMain = ({pathProp}) => {
     setMenuUrl(pathProp);
   }, [pathProp]);
 
+  // console.log("MenuPath aaaa: ", menuPath);
+  // console.log("SubMenuPath aaaa:", subMenuPath);
+
   return (
     <div className='menu-wrap'>
       <div className='menu-main'>
         <div className='sub-menu-position'>
-          <SubMenu subMenuProp={ menuPath } subPathProp = { subMenuPath } />
+          <SubMenu subMenuProp={ menuPath } subPathProp={ subMenuPath } menuUrlProp={ menuUrl } />
         </div>
         <div className='menu-main-wrap' style={{display: subMenuPath === "sandwich"? "block" : "none"}}>
           <div className='menu-main-img'>

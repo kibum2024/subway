@@ -1,0 +1,5 @@
+.map-container {
+  height: 1000px; /* 원하는 높이로 설정 */
+  width: 100%; /* 전체 너비로 설정 */
+  margin: 0 auto; /* 중앙 정렬 */
+}

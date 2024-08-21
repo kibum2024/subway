@@ -10,6 +10,7 @@ import MembershipStep03 from 'src/components/main/MembershipStep03';
 import MembershipStep04 from 'src/components/main/MembershipStep04';
 import Home from 'src/components/content/home/Home';
 import MenuMain from 'src/components/content/menu/MenuMain';
+import StoreFind from 'src/components/content/store/StoreFind';
 import 'src/App.css';
 
 function Main() {
@@ -36,6 +37,8 @@ function Main() {
                 <Route path="/menu/morning" element={<MenuMain pathProp = {"/menu/morning" }/>} ></Route> 
                 <Route path="/menu/smilesup" element={<MenuMain pathProp = {"/menu/smilesup" }/>} ></Route> 
                 <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
+
+                <Route path="/story/storefind" element={<StoreFind pathProp = {"/menu/catering" }/>} ></Route> 
 
 
                 {/* <Route path="/menu/main" element={<MenuMain />} ></Route>  */}
