@@ -106,7 +106,7 @@
   letter-spacing: -0.05em;
 }
 
-.product-summary {
+.product-summary-wrap {
   display: block;
   position: absolute;
   width: 370px;
@@ -115,6 +115,10 @@
   top: 0px;
   z-index: 5;
   background-color: #009223;
+}
+
+.product-summary {
+  position: relative;
 }
 
 .product-comment2 {
@@ -145,6 +149,7 @@
 
 .product-btn {
   position: absolute;
+  bottom: -40px;
   transform: translateX(-50%) scale(0.4) ;
 }
 

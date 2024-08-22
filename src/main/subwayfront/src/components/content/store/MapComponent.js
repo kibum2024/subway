@@ -3,11 +3,11 @@ import L from 'leaflet';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet'; // Leaflet 라이브러리 import
 import 'leaflet/dist/leaflet.css';
 import 'src/components/content/store/MapComponent.css';
-import btnMore from 'src/image/menu/btn_more.png';
+import btnPosition from 'src/image/menu/btn_position.png';
 
 // 커스텀 아이콘 설정
 const customIcon = new L.Icon({
-  iconUrl: btnMore,
+  iconUrl: btnPosition,
   iconSize: [32, 55], // 아이콘 크기
   iconAnchor: [16, 32], // 아이콘의 앵커 포인트
   popupAnchor: [0, -32], // 팝업의 앵커 포인트

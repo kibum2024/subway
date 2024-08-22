@@ -85,22 +85,25 @@ const StoreFind = ({pathProp}) => {
       <div className='store-find'>
         <h2>매장찾기</h2>
         <div className='store-search-title'>
-          <input id="keyword" maxlength="30" placeholder="지역 또는 매장명 입력" type="text" onChange={handleKeywordChange}></input>
+          <input id="keyword" maxlength="30" placeholder="지역 또는 매장명 입력" type="text" onKeyDown={() => handleSearchClick()} onChange={handleKeywordChange}></input>
           <img className='store-search-btn' src={common.search01} alt="" onClick={() => handleSearchClick()} />
           <p>* 운영시간은 매장 사정에 따라 변경될 수 있습니다.</p>
         </div>
-        <div className='store-info'>
-          <ul>
-            {currentItems.map((store, index) => (
-              <li key={index} onClick={() => handleStoreClick(store.latitude, store.longitude)}>
-                <div className='store-name'><strong>{store.storeName}</strong></div>
-                <div className='store-address'>{store.address}</div>
-                <div className='store-contact'>{store.contact}</div>
-                <div className='store-open-time'>{store.openTime}-{store.closeTime}</div>
-                <div className='store-service'>{store.services}</div>
-              </li>
-            ))}
-          </ul>
+        <div className='store-info' style={{display: currentItems.length > 0? "block" : "none"}}>
+          <div className='store-find-count'>검색 결과 <span>{currentItems.length}</span>건</div>
+          <div className='store-find-info'>
+            <ul>
+              {currentItems.map((store, index) => (
+                <li key={index} onClick={() => handleStoreClick(store.latitude, store.longitude)}>
+                  <div className='store-name'><strong>{store.storeName}</strong></div>
+                  <div className='store-address'>{store.address}</div>
+                  <div className='store-contact'>{store.contact}</div>
+                  <div className='store-open-time'>{store.openTime}-{store.closeTime}</div>
+                  <div className='store-service'>{store.services}</div>
+                </li>
+              ))}
+            </ul>
+          </div>
           <div className='store-page'>
             <Pagination
               currentPage={currentPage}

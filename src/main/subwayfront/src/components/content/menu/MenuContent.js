@@ -90,18 +90,21 @@ const MenuContent = ({ menuUrlProp }) => {
       </div>
       <div className='menu-content-product'>
         <ul>
+          {console.log("productsData : ", productsData)}
           {productsData.map((product, index) => (
             <li key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
-              <div className='product-label'>
-                <img src={menuImages[`${product.productImage}`]} alt="" />
+              <div className='product-label'> 
+                <img src={menuImages[`${product.productImage}`]} alt="product img" />
                 <p className='product-title1'><strong>{product.productName}</strong></p>
                 <p className='product-eng-name1'>{product.productEngName}</p>
                 <p className='product-kcal1'>{product.productKcal}</p>
               </div>
-              <div className='product-summary' style={{display: (displayOn) && index === displayIndex? "block" : "none"}}>
-                <p className='product-title2'><strong>{product.productName}</strong></p>
-                <p className='product-eng-name2'>{product.productEngName}</p>
-                <p className='product-comment2' dangerouslySetInnerHTML={{ __html: product.productComment }} ></p>
+              <div className='product-summary-wrap' style={{display: (displayOn) && index === displayIndex? "block" : "none"}}>
+                <div className='product-summary'>
+                  <p className='product-title2'><strong>{product.productName}</strong></p>
+                  <p className='product-eng-name2'>{product.productEngName}</p>
+                  <p className='product-comment2' dangerouslySetInnerHTML={{ __html: product.productComment }} ></p>
+                </div>
                 <div>
                   <img className='product-btn' src={menuImages.btnMore} alt="" />
                 </div>
