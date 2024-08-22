@@ -15,4 +15,8 @@ public class StoreService {
     public List<Store> getStoreByAll() {
         return storeRepository.findStoreByAll();
     }
+
+    public List<Store> getStoreBySearch(String keyword) {
+        return storeRepository.findStoreBySearch(keyword);
+    }
 }

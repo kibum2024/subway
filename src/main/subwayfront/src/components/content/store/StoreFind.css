@@ -25,7 +25,6 @@
   background-color: #fff;
   border: 1px solid #dddddd;
 }
-
 .store-find h2 {
   color: #292929;
   font-size: 28px;
@@ -34,7 +33,12 @@
   padding: 34px 0 17px 0;
 }
 
-.store-find input {
+.store-search-title {
+  position: relative;
+  width: 100%;
+}
+
+.store-search-title input {
   height: 41px;
   width: 100%;
   text-indent: 14px;
@@ -43,10 +47,67 @@
   border: 2px solid #dddddd
 }
 
-.store-find p {
+.store-search-title p {
   padding: 0 0 0 10px;
   font-size: 14px;
   line-height: 1.6;
   letter-spacing: -.5px;
   text-indent: -10px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.store-search-btn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.store-info {
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.store-info ul {
+  cursor: pointer;
+}
+
+.store-name {
+  color: #292929;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 14px;
+  display: block;
+}
+
+.store-address, .store-contact {
+  color: #999999;
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 5px;
+}
+
+.store-open-time {
+  color: #999999;
+  font-size: 13px;
+  line-height: 13px;
+  margin-bottom: 5px;
+}
+
+.store-service {
+  color: #009223;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 13px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.store-page {
+  position: absolute;
+  bottom: 5px;
+  left: 45px;
 }

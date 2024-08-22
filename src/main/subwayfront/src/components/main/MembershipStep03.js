@@ -285,38 +285,6 @@ const MembershipStep03 = () => {
                       </dl>
                     </div>
                   </div>
-                  <div className="write_info_wrap" style={{display:'none'}}>
-                    {/* <!-- 입력1세트 --> */}
-                    <div className="input_set">
-                      <dl>
-                        <dt>우편번호</dt>
-                        <dd>
-                          {/* <!-- 주소 폼일시 post_num 클래스 추가 --> */}
-                          <span className="form_text post_num" style={{width:'650px'}}>
-                            <input id="zipCd" name="zipCd" placeholder="00000" readonly="" type="text" />
-                          </span>
-                          <div className="btn_input_in">
-                            <button className="in_form_btn" type="button">
-                              <span id="addressSearchBtn">우편번호검색</span>
-                            </button>
-                          </div>
-                        </dd>
-                        <dt>주소</dt>
-                        <dd>
-                          <span className="form_text">
-                            <input id="baseAddr" name="baseAddr" placeholder="주소 입력" readonly="" type="text" />
-                          </span>
-                        </dd>
-                        <dt>상세주소</dt>
-                        <dd>
-                          <span className="form_text">
-                            <input id="dtlAddr" name="dtlAddr" placeholder="상세주소 입력" type="text" />
-                          </span>
-                        </dd>
-                      </dl>
-                    </div>
-                    {/* <!--// 입력1세트 --> */}
-                  </div>
                 </div>
               </div>
               {/* <!--// step03_cont --> */}
