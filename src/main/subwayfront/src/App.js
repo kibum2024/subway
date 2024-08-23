@@ -11,6 +11,8 @@ import MembershipStep04 from 'src/components/main/MembershipStep04';
 import Home from 'src/components/content/home/Home';
 import MenuMain from 'src/components/content/menu/MenuMain';
 import StoreFind from 'src/components/content/store/StoreFind';
+import Advertisement from 'src/components/content/news/Advertisement';
+import FooterMain from 'src/components/footer/FooterMain';
 import 'src/App.css';
 
 function Main() {
@@ -37,9 +39,10 @@ function Main() {
                 <Route path="/menu/morning" element={<MenuMain pathProp = {"/menu/morning" }/>} ></Route> 
                 <Route path="/menu/smilesup" element={<MenuMain pathProp = {"/menu/smilesup" }/>} ></Route> 
                 <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
+    
+                <Route path="/news/advertisement" element={<Advertisement pathProp = {"/news/advertisement" }/>} ></Route> 
 
                 <Route path="/story/storefind" element={<StoreFind pathProp = {"/story/storefind" }/>} ></Route> 
-
 
                 {/* <Route path="/menu/main" element={<MenuMain />} ></Route>  */}
                 {/* <Route path="/menu/rap" element={<MenuRap />} ></Route>  */}
@@ -61,7 +64,7 @@ function Main() {
               </Routes>
           </div>
           <div className='footer-main-wrap'>
-
+            <FooterMain></FooterMain>       
           </div>
         </div>
       </MenuProvider>

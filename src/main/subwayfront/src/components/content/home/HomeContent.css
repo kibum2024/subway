@@ -1,0 +1,289 @@
+.home-content-wrap {
+  width: 100%;
+}
+
+.home-content-1 {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  margin: 150px auto 0px;
+}
+
+.utilization {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin-left: 55px;
+}
+
+.utilization p {
+  position: absolute;
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  left: 39px;
+  top: 38px;
+}
+
+.utilization a {
+  position: absolute;
+  width: 92px;
+  left: 41px;
+  bottom: 42px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.history {
+  width: 825px;
+  height: 300px;
+  position: relative;
+}
+
+.history p {
+  color: #fff;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 40px;
+  letter-spacing: -0.03em;
+  position: absolute;
+  left: 410px;
+  top: 38px;
+}
+
+.history a {
+  position: absolute;
+  left: 410px;
+  bottom: 42px;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  width: 128px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.home-content-2 {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  margin: 0px auto;
+}
+
+.whats_new {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 870px;
+  height: 300px;
+  border-radius: 30px 0 30px 0;
+  background-color: #fff;
+  position: relative;
+}
+
+.whats_new .hd {
+  position: absolute;
+  top: 70px;
+  left: 50px;
+}
+
+.whats_new .hd img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  opacity: 1;
+}
+
+.whats_new h2 {
+  color: #292929;
+  font-size: 30px;
+  font-weight: bold;
+  min-height: 60px;
+  padding: 17px 0 0 25px;
+  margin-bottom: 1px;
+  z-index: 90;
+}
+
+.whats_new p {
+  text-align: center;
+  line-height: 26px;
+  letter-spacing: -0.04em;
+}
+
+.whats_new .board_list {
+  position: absolute;
+  left: 389px;
+  top: 76px;
+}
+
+.board_list ul li a {
+  display: inline-block;
+  font-size: 16px;
+  height: 20px;
+  line-height: 20px;
+  color: #292929;
+  position: relative;
+  letter-spacing: -0.04em;
+  margin: 10px 0px;
+}
+
+.board_list ul li a:hover {
+  color: #009223;
+  text-decoration: underline;
+}
+
+
+.home-content-banner {
+  width: 270px;
+  height: 300px;
+  margin-left: 30px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 30px 0 30px;
+}
+
+.home-content-banner ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.home-content-banner ul li {
+  display: none;
+}
+
+/* .video-item.active {
+  display: block;
+} */
+
+.home-content-page {
+  position: absolute;
+  display: flex;
+  flex-wrap: nowrap;
+  top: 20px;
+  right: 30px;
+  gap: 10px;
+}
+
+.home-content-page div {
+  width: 10px;
+  height: 10px;
+  background-color: #009223;
+  border-radius: 50%;
+}
+
+.home-content-page .active {
+  width: 30px;
+  height: 10px;
+  background-color: yellow;
+  border-radius: 5px;
+}
+
+.home-content-3 {
+  width: 100%;
+  height: 150px;
+  /* line-height: 150px; */
+  background-color: #fff;
+}
+
+.home-content-3 ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+
+.home-content-3 ul li {
+  position: relative;
+  width: 268px;
+}
+.home-content-3 ul li a {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+
+.a1 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.a1 img {
+  width: auto;
+  height: 70px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.a2 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.a2 img {
+  width: auto;
+  height: 70px;
+  position: absolute;
+  left: -70px;
+  top: 0px;
+}
+
+.a3 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.a3 img {
+  width: auto;
+  height: 70px;
+  position: absolute;
+  left: -140px;
+  top: 0px;
+}
+
+.a4 {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.a4 img {
+  width: auto;
+  height: 70px;
+  position: absolute;
+  left: -210px;
+  top: 0px;
+}
+
+.message {
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  left: 80px;
+}

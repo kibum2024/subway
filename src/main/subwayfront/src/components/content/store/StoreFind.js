@@ -30,7 +30,6 @@ const StoreFind = ({pathProp}) => {
   const handleSearchClick = () => {
     const fetchStores = async () => {
       try {
-        console.log("keyword : ", keyword);
         const response = await axios.get(`${apiUrl}/store/search`, {
           params: {
             keyword: keyword,

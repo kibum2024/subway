@@ -5,6 +5,14 @@ import mainSlide04 from 'src/image/home/main04.jpg';
 import mainSlide05 from 'src/image/home/main05.jpg';
 import storeMap from 'src/image/home/icon_store_map.png';
 import franchise from 'src/image/home/icon_franchise.png';
+import utilization from 'src/image/home/bg_utilization.png';
+import subwayHhistory from 'src/image/home/img_subway_history.png';
+import quickMenu from 'src/image/home/icon_quickmenu.png';
+import bulTtit from 'src/image/home/bul_tit.png';
+import drama01 from 'src/image/home/drama01.jpg';
+import drama02 from 'src/image/home/drama02.jpg';
+import drama03 from 'src/image/home/drama03.jpg';
+import drama04 from 'src/image/home/drama04.jpg';
 
 export { 
   mainSlide01,
@@ -13,5 +21,13 @@ export {
   mainSlide04,
   mainSlide05,
   storeMap,
-  franchise
+  franchise,
+  utilization,
+  subwayHhistory,
+  quickMenu,
+  bulTtit,
+  drama01,
+  drama02,
+  drama03,
+  drama04
 };
