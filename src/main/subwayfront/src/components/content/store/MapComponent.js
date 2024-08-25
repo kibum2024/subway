@@ -24,18 +24,31 @@ const ChangeView = ({ center }) => {
   return null;
 };
 
-const MapComponent = ({latitudeProp, longitudeProp}) => {
-  const [position, setPosition] = useState([latitudeProp, longitudeProp]);
+const MapComponent = ({storeProp}) => {
+  const [position, setPosition] = useState([storeProp.latitude, storeProp.longitude]);
 
   useEffect(() => {
     // 좌표 값을 숫자로 변환
-    const latitude = parseFloat(latitudeProp);
-    const longitude = parseFloat(longitudeProp);
+    const latitude = parseFloat(storeProp.latitude);
+    const longitude = parseFloat(storeProp.longitude);
 
     if (!isNaN(latitude) && !isNaN(longitude)) {
       setPosition([latitude, longitude]);
     }
-  }, [latitudeProp, longitudeProp]);
+  }, [storeProp.latitude, storeProp.longitude]);
+
+  const formatPhoneNumber = (phoneNumber) => {
+    // 070 전화번호 포맷(11자리)
+    if (phoneNumber.length === 11) {
+      return phoneNumber.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3');
+    }
+    // 일반적인 지역번호(031, 02 등) 포맷(10자리)
+    return phoneNumber.replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+  }
+
+  const formatTime = (Time) => {
+    return Time.replace(/(\d{2})(\d{2})/, '$1:$2');
+  }
 
   return (
     <MapContainer center={position} zoom={17} zoomControl={false} style={{ height: "700px", width: "100%" }}>
@@ -46,14 +59,24 @@ const MapComponent = ({latitudeProp, longitudeProp}) => {
       <ChangeView center={position} /> 
       <Marker position={position}  icon={customIcon}>
         <Popup>
-          광교경기대후문<br />
-          <br />
-          주소 : 경기도 수원시 영통구 대학로 34<br />
-          <br />
-          연락처 : 070-7750-2040<br />
-          <br />
-          영업시간 :08:00 - 22:00<br />
-          <br />
+          <div className='map-wrap'>
+            <h3>{storeProp.storeName}</h3>
+            <br />
+            <div>
+              <span className='map-title'>주소</span>
+              <span>{storeProp.address}</span>
+            </div>
+            <br />
+            <div>
+              <span className='map-title'>연락처</span>
+              <span>{formatPhoneNumber(storeProp.contact)}</span>
+            </div>
+            <br />
+            <div>
+              <span className='map-title'>영업시간</span>
+              <span>{formatTime(storeProp.openTime)} - {formatTime(storeProp.closeTime)}</span>
+            </div>
+          </div>
         </Popup>
       </Marker>
     </MapContainer>

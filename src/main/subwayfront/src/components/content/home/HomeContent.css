@@ -104,13 +104,14 @@
 }
 
 .whats_new h2 {
+  position: relative;
   color: #292929;
   font-size: 30px;
   font-weight: bold;
   min-height: 60px;
   padding: 17px 0 0 25px;
   margin-bottom: 1px;
-  z-index: 90;
+  z-index: 9;
 }
 
 .whats_new p {
@@ -206,6 +207,7 @@
 .home-content-3 ul li {
   position: relative;
   width: 268px;
+  cursor: pointer;
 }
 .home-content-3 ul li a {
   display: flex;

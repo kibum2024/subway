@@ -90,7 +90,6 @@ const MenuContent = ({ menuUrlProp }) => {
       </div>
       <div className='menu-content-product'>
         <ul>
-          {console.log("productsData : ", productsData)}
           {productsData.map((product, index) => (
             <li key={index} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={handleMouseLeave}>
               <div className='product-label'> 

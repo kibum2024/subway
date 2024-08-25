@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as mainImages from 'src/image/home/mainImage';
 import 'src/components/content/home/HomeContent.css';
 
 const HomeContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
   const images = [mainImages.drama01, mainImages.drama02, mainImages.drama03, mainImages.drama04];
 
   const handlePageClick = (index) => {
     setCurrentIndex(index);
   }
 
+  const handleAdvertisementClick = () => {
+		navigate("/news/advertisement");
+	}
 
   return (
     <div className='home-content-wrap'>
@@ -71,48 +76,40 @@ const HomeContent = () => {
       <div className='home-content-3'>
         <ul>
           <li class="qm">
-            <a href="/store/franchise">
-              <div class="icon a1">
-                <img src={mainImages.quickMenu} alt="" />
-              </div>
-              <div className='message'>
-                <strong>프랜차이즈</strong>
-                <p>개설절차/투자비용 정보</p>
-              </div>
-            </a>
+            <div class="icon a1">
+              <img src={mainImages.quickMenu} alt="" />
+            </div>
+            <div className='message'>
+              <strong>프랜차이즈</strong>
+              <p>개설절차/투자비용 정보</p>
+            </div>
           </li>
           <li class="qm">
-            <a href="/store/branch">
-              <div class="icon a2">
-                <img src={mainImages.quickMenu} alt="" />
-              </div>
-              <div className='message'>
-                <strong>지사안내</strong>
-                <p>수도권/지방 지사정보</p>
-              </div>
-            </a>
+            <div class="icon a2">
+              <img src={mainImages.quickMenu} alt="" />
+            </div>
+            <div className='message'>
+              <strong>지사안내</strong>
+              <p>수도권/지방 지사정보</p>
+            </div>
+          </li>
+          <li class="qm" onClick={handleAdvertisementClick}>
+            <div class="icon a3">
+              <img src={mainImages.quickMenu} alt="" />
+            </div>
+            <div className='message'>
+              <strong>광고영상</strong>
+              <p>TV광고/동영상</p>
+            </div>
           </li>
           <li class="qm">
-            <a href="/news/advertisement">
-              <div class="icon a3">
-                <img src={mainImages.quickMenu} alt="" />
-              </div>
-              <div className='message'>
-                <strong>광고영상</strong>
-                <p>TV광고/동영상</p>
-              </div>
-            </a>
-          </li>
-          <li class="qm">
-            <a href="/store/faq">
-              <div class="icon a4">
-                <img src={mainImages.quickMenu} alt="" />
-              </div>
-              <div className='message'>
-                <strong>고객문의</strong>
-                <p>자주하는 질문/1:1문의</p>
-              </div>
-            </a>
+            <div class="icon a4">
+              <img src={mainImages.quickMenu} alt="" />
+            </div>
+            <div className='message'>
+              <strong>고객문의</strong>
+              <p>자주하는 질문/1:1문의</p>
+            </div>
           </li>
         </ul>
       </div>

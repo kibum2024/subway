@@ -13,6 +13,8 @@ import drama01 from 'src/image/home/drama01.jpg';
 import drama02 from 'src/image/home/drama02.jpg';
 import drama03 from 'src/image/home/drama03.jpg';
 import drama04 from 'src/image/home/drama04.jpg';
+import logo from 'src/image/home/logo_w.png';
+import arrTop from 'src/image/home/icon_arr_top.png';
 
 export { 
   mainSlide01,
@@ -29,5 +31,7 @@ export {
   drama01,
   drama02,
   drama03,
-  drama04
+  drama04,
+  logo,
+  arrTop
 };

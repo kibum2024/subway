@@ -4,10 +4,54 @@
   background-color: transparent;
 }
 
-.sub-menu-title {
+.sub-menu {
+  /* padding: 10px; */
+  width: 100%;
+  position: relative; 
+  transition: all 0.3s ease-in-out;
   border-bottom: 0.1px solid transparent;
   background-color: transparent;
 }
+
+.sticky {
+  position: fixed; /* 스크롤 시 상단에 고정 */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 시각적 효과 */
+  border-top: 1px solid #f2eeee;
+  background-color: #fff;
+}
+
+.sub-menu-logo img {
+  position: absolute;
+  left: 200px;
+  top: 15px;
+  height: 30px;
+  width: 110px;
+  overflow: hidden;
+}
+.sub-menu-top {
+  position: absolute;
+  right: 200px;
+  top: 15px;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  text-align: center;
+  cursor: pointer;
+}
+
+.sub-menu-top div {
+  height: 15px;
+  width: 30px;
+  font-weight: bold;
+  color: #bbbbbb;
+  font-size: 13px;
+  margin: -10px 2px;
+}
+
 .sub-menu-title ul {
   width: auto;
   display: flex;
@@ -30,6 +74,9 @@
   z-index: 10;
 }
 
+.sticky-color {
+  color: #999999 !important;
+}
 .sub-menu-title ul li + li::before {
   content: '•'; /* 점 모양 */
   font-size: 16px;

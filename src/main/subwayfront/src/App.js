@@ -2,17 +2,19 @@ import React from 'react';
 import { Routes, Route, Link, Navigate, useNavigate, useLocation } from 'react-router-dom';
 import { AuthProvider } from 'src/AuthContext';
 import { MenuProvider } from 'src/MenuContext';
-import Header from 'src/components/main/Header';
-import Login from 'src/components/main/Login';
-import MembershipStep01 from 'src/components/main/MembershipStep01';
-import MembershipStep02 from 'src/components/main/MembershipStep02';
-import MembershipStep03 from 'src/components/main/MembershipStep03';
-import MembershipStep04 from 'src/components/main/MembershipStep04';
+import Header from 'src/components/header/Header';
+import Login from 'src/components/header/Login';
+import MembershipStep01 from 'src/components/header/MembershipStep01';
+import MembershipStep02 from 'src/components/header/MembershipStep02';
+import MembershipStep03 from 'src/components/header/MembershipStep03';
+import MembershipStep04 from 'src/components/header/MembershipStep04';
 import Home from 'src/components/content/home/Home';
 import MenuMain from 'src/components/content/menu/MenuMain';
 import StoreFind from 'src/components/content/store/StoreFind';
 import Advertisement from 'src/components/content/news/Advertisement';
 import FooterMain from 'src/components/footer/FooterMain';
+import EventHome from 'src/components/content/news/EventHome';
+import EventDetail from 'src/components/content/news/EventDetail';
 import 'src/App.css';
 
 function Main() {
@@ -41,6 +43,8 @@ function Main() {
                 <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
     
                 <Route path="/news/advertisement" element={<Advertisement pathProp = {"/news/advertisement" }/>} ></Route> 
+                <Route path="/news/event" element={<EventHome pathProp = {"/news/event" }/>} ></Route> 
+                <Route path="/news/event/detail" element={<EventDetail pathProp = {"/news/event/detail" }/>} ></Route> 
 
                 <Route path="/story/storefind" element={<StoreFind pathProp = {"/story/storefind" }/>} ></Route> 
 

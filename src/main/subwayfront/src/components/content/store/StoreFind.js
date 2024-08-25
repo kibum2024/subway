@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import MapComponent from './MapComponent';
 import SubMenu from 'src/components/content/common/SubMenu';
-import * as common from 'src/image/common/common';
+import * as common from 'src/image/common/commonImage';
 import Pagination from 'src/components/content/common/Pagination';
 import 'src/components/content/store/StoreFind.css';
 
@@ -12,11 +12,19 @@ const StoreFind = ({pathProp}) => {
   const [menuPath, setMenuPath] = useState([]);
   const [subMenuPath, setSubMenuPath] = useState([]);
   const [keyword, setKeyword] = useState([]);
-  const [selectedLatitude, setSelectedLatitude] = useState("37.2994408");
-  const [selectedLongitude, setSelectedLongitude] = useState("127.0435693");
+  const [selectedStore, setSelectedStore] = useState(
+                                                      {address : "서울특별시 종로구 새문안로 3길 19",
+                                                        closeTime : "2200",
+                                                        contact : "027237222",
+                                                        id : 37,
+                                                        latitude : "37.5720212",
+                                                        longitude : "126.9724621",
+                                                        openTime : "0800",
+                                                        services : "APP-패스트썹, APP-홈썹, 배달가능, 아침메뉴, 단체주문, 시그니처랩",
+                                                        storeName : "광화문"}
+                                                    );
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 5; // 페이지당 항목 수
-
   const apiUrl = process.env.REACT_APP_API_URL;
 
   useEffect(() => {
@@ -62,9 +70,8 @@ const StoreFind = ({pathProp}) => {
     setKeyword(inputText);
   }
 
-  const handleStoreClick = (latitude, longitude) => {
-    setSelectedLatitude(latitude);
-    setSelectedLongitude(longitude);
+  const handleStoreClick = (store) => {
+    setSelectedStore(store);
   }
 
   // console.log("stores : ", stores);
@@ -77,8 +84,8 @@ const StoreFind = ({pathProp}) => {
         </div>
       </div>
       <div className='store-map'>
-        {selectedLatitude && selectedLongitude && (
-          <MapComponent latitudeProp={selectedLatitude} longitudeProp={selectedLongitude} />
+        {selectedStore && (
+          <MapComponent storeProp={selectedStore} />
         )}
       </div>
       <div className='store-find'>
@@ -93,7 +100,7 @@ const StoreFind = ({pathProp}) => {
           <div className='store-find-info'>
             <ul>
               {currentItems.map((store, index) => (
-                <li key={index} onClick={() => handleStoreClick(store.latitude, store.longitude)}>
+                <li key={index} onClick={() => handleStoreClick(store)}>
                   <div className='store-name'><strong>{store.storeName}</strong></div>
                   <div className='store-address'>{store.address}</div>
                   <div className='store-contact'>{store.contact}</div>

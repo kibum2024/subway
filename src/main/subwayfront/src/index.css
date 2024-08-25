@@ -758,7 +758,7 @@ em {
   vertical-align: middle;
   width: 21px;
   height: 16px;
-  background: url(./image/icon_reg.png) 0 0 no-repeat;
+  background: url(./image/header/icon_reg.png) 0 0 no-repeat;
   margin-left: 7px;
 }
 
@@ -871,7 +871,7 @@ em {
   content: '';
   width: 0;
   height: 20px;
-  background: url(./image/icon_checkbox.png) 0 0 no-repeat;
+  background: url(./image/header/icon_checkbox.png) 0 0 no-repeat;
   position: absolute;
   left: 4px;
   top: 0;
@@ -2889,7 +2889,7 @@ address {
 
 /* 알림 코멘트 ::2019 */
 .inquiry_notice {
-  background: #f6f6f6 url(./image/icon_exc.png) 25px 50% no-repeat;
+  background: #f6f6f6 url(./image/header/icon_exc.png) 25px 50% no-repeat;
   display: flex;
   color: #999999;
   flex-direction: column;

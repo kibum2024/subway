@@ -1,0 +1,380 @@
+.login-wrap {
+  position: absolute;
+  width: 100%;
+  padding-bottom: 130px;
+  background: #f6f6f6;
+  min-height: calc(100vh - 300px);
+}
+
+.login-signin-wrapp {
+  margin: 70px auto 0;
+  width: 650px;
+  background-color: #fff;
+  padding: 86px 100px 60px;
+  box-sizing: border-box;
+  border-radius: 30px 0;
+}
+
+.login-signin-tit> ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.login-signin-tit> ul> li {
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+
+.login-on {
+  border-bottom: 2px solid #009223;
+}
+
+.login-on a {
+  color: #009223;
+}
+
+.login-signin-input {
+  margin-top: 20px;
+  display: block;
+}
+
+.login-signin-input p {
+  color: #999;
+  text-align: center;
+  letter-spacing: -0.05em;
+  line-height: 26px;
+  margin: 22px 0px 32px;
+}
+.login-input-set {
+  margin-bottom: 10px;
+}
+.login-input-set> ul {
+  width: 450px;
+  margin: 0 auto;
+  border: 1px solid #c9c3c3;
+  transition: border 0.3s ease;
+}
+
+.login-input-set> ul> li {
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  border: 1px solid #c9c3c3;
+}
+.login-input-set> ul> li> .login-form-label {
+  display: inline-block;
+  font-weight: bold;
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  margin-left: 20px;
+}
+.login-input-set> ul> li> .login-form-text {
+  display: inline-block;
+  font-weight: 300;
+  width: 260px;
+  height: 80px;
+  line-height: 80px;
+}
+.login-required-value {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  height: 80px;
+  font-size: 16px;
+  text-indent: 15px;
+}
+
+.login-input-set ul.focused {
+  border: 1px solid #009223;
+}
+
+.login-required-value::placeholder {
+  color: #a0a0a0; /* 원하는 색상 코드로 변경하세요 */
+}
+
+.login-form-check {
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  display: flex;  
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.login-form-checkbox {
+  width:26px;
+  height: 26px;
+  line-height: 26px;
+  border-radius: 50%;
+  border: 1px solid #a0a0a0;
+  cursor: pointer;
+}
+
+.login-form-check> div {
+  font-weight: bold;
+  color: #595656;
+  margin-left: 5px;
+}
+
+.login-form-check i {
+  position: absolute;
+  font-size: 40px;
+  font-weight: bold;
+  left: -1px;
+  top: -2px;
+  color: #009223;
+  overflow: hidden;
+  transition: width 1s ease-in-out;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.login-signin-btn {
+  margin-top: 40px;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #009223;
+  cursor: pointer;
+}
+.login-signin-btn a {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.login-signin-link {
+  margin-top: 30px;
+}
+
+.login-signin-link ul {
+  padding: 0 18px;
+  width: 100%;
+  box-sizing: border-box;
+  display: table
+}
+
+.login-signin-link li {
+  display: table-cell;
+  text-align: center;
+  position: relative;
+}
+.login-signin-link li:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: -3px;
+  width: 1px;
+  height: 16px;
+  background-color: #ddd
+}
+
+.login-signin-link li:first-child {
+  text-align: left;
+}
+
+.login-signin-link li:first-child:after {
+  right: 8px;
+}
+
+.login-signin-link li:last-child {
+  text-align: right;
+}
+
+.login-signin-link li:last-child:after {
+  display: none;
+}
+
+.login-signin-link li a {
+  color: #999;
+  font-weight: 300;
+  letter-spacing: -0.05em;
+}
+
+/* 비회원 */
+
+.login-nomember-input p {
+  color: #999;
+  letter-spacing: -0.05em;
+  line-height: 26px;
+  margin-top: 22px;
+}
+
+.login-nomember-join {
+  display: block;
+  text-align: right;
+  margin-top: 40px;
+}
+
+.signin-btn {
+  position: relative;
+  font-size: 16px;
+  color: #bbb;
+}
+
+.signin-btn::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background: #bbb;
+}
+
+.form-checkbox {
+  display: inline-block;
+  cursor: pointer;  
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  color: #292929;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.05em;
+}
+
+.form-checkbox input[type="checkbox"] {
+  height: 0;
+  opacity: 0;
+  width: 0;
+  position: absolute;
+  left: -10px;
+}
+
+.form-checkbox .icon {
+  width: 26px;
+  height: 26px;
+  border: 2px solid #dddddd;
+  border-radius: 50px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.form-checkbox .icon:before {
+  content: '';
+  width: 0;
+  height: 20px;
+  background: url(../../image/header/icon_checkbox.png) 0 0 no-repeat;
+  position: absolute;
+  left: 4px;
+  top: 0;
+  transition-duration: 0.2s
+}
+
+.form-checkbox input[type="checkbox"]:checked+.icon:before {
+  width: 24px;
+}
+
+.form-checkbox em {
+  color: #009223;
+}
+
+.login-nomember-txt-area {
+  padding: 20px;
+  height: 180px;
+  overflow-y: scroll;
+  border: 1px solid #e5e5e5;
+  margin: 15px 0;
+  color: #bbb;
+  font-size: 13px;
+  line-height: 21px;
+}
+
+.login-nomember-confirm-wrap input[type="text"] {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  padding: 0 30px;
+}
+
+.name-input {
+  margin-top: 22px;
+}
+.login-btn span {
+  display: inline-block;
+  vertical-align: middle;
+  height: 70px;
+  line-height: 70px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+.login-btn.bgc-green {
+  background: #009223;
+  color: #fff;
+}
+
+.login-btn.bgc-gray {
+  background: #ddd;
+  color: #aaa;
+}
+
+.login-btn.bgc-lg {
+  background: #62ce08;
+  color: #fff;
+}
+
+.login-nomember-confirm-wrap ul li {
+  display: flex;
+  margin-bottom: 5px;
+  justify-content: space-between;
+}
+
+.login-nomember-confirm-wrap ul li input[type='text'].phone-input {
+  width: 60%;
+  margin-right: 5px;
+}
+
+.login-nomember-confirm-wrap ul li input[type='text'].confirm-number {
+  width: 60%;
+  margin-right: 5px;
+}
+
+.login-btns-wrapper {
+  width: 38%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #009223;
+}
+
+.login-btns-complete-wrapper {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #ddd;
+  margin-bottom: 5px;
+}
+
+.login-btns-order-wrapper {
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  font-size: 16px;
+  font-weight: 400;
+  background: #62ce08;
+}
+
+.bi-password {
+  position: absolute;
+  font-size: 28px;
+}
