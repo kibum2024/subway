@@ -48,7 +48,12 @@ const Header = () => {
 
   const handleSubMenuClick = (menuUrl) => {
     setVisibleIndex(-1);
-    navigate(menuUrl);
+    if (menuUrl === "/store/membership" && !loginStatus) {
+      alert("로그인을 해주세요.");
+      navigate("/users/login",{state: {url: '/store/membership'}});
+    } else {
+      navigate(menuUrl);
+    }
   };
 
   return (

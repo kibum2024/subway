@@ -2,11 +2,13 @@ import React, { useState, useEffect, useContext } from 'react';
 // import CryptoJS from 'crypto-js';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { AuthContext } from 'src/AuthContext';
 import 'src/components/header/Login.css';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+  const location = useLocation();
   const navigate = useNavigate();
   const [isFocused, setIsFocused] = useState(false);
   const [loginMenuCheck, setLoginMenuCheck] = useState("1"); 
@@ -15,6 +17,7 @@ const Login = () => {
   const [message, setMessage] = useState('');
   const [password, setPassword] = useState('');
   const [email, setEmail] = useState(''); 
+  const [url, setUrl] = useState(null); 
 
   const handleLoginClick = async (e) => {
     e.preventDefault();
@@ -30,7 +33,11 @@ const Login = () => {
 
       setMessage("000");
       login(true);
-      navigate('/');
+      if (url === "/store/membership") {
+        navigate('/store/membership');
+      } else {
+        navigate('/');
+      }
 
 
     } catch (error) {
@@ -38,9 +45,11 @@ const Login = () => {
         if (error.response) {
             // The server responded with a status code outside the range of 2xx
             setMessage("402");
+            alert("아이디 혹은 비밀번호가 잘못되었습니다.");
         } else {
             // The request was made but no response was received
             setMessage("401");
+            alert("아이디 혹은 비밀번호가 잘못되었습니다.");
         }
     }
 
@@ -49,6 +58,12 @@ const Login = () => {
     }
 
   };
+
+  useEffect(() => {
+    if (location.state) {
+      setUrl(location.state.url || null);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     // 컴포넌트가 마운트될 때 로컬 스토리지에서 이메일을 가져옵니다.
@@ -90,7 +105,14 @@ const Login = () => {
     setIsEmailChecked(isChecked);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleLoginClick(event);
+    }
+  }
+
   return (
+    <div className='login-wrap-wrap'>
       <div className='login-wrap' >
         <div className="login-signin-wrapp">
           <div className="login-signin-tit">
@@ -123,7 +145,7 @@ const Login = () => {
                                  id="password" name="password" placeholder="비밀번호 입력" type={passwordView ? 'text' : 'password'} 
                                  onFocus={() => setIsFocused(true)}
                                  onBlur={() => setIsFocused(false)}
-                                 onChange={onPasswordChange} />
+                                 onChange={onPasswordChange} onKeyDown={handleKeyDown}/>
                         </span>
                         <i class="bi bi-eye bi-password" onClick={isPasswordViewClick} style={{ display: (!passwordView) ? 'inline-block' : 'none' }}></i>
                         <i class="bi bi-eye-slash  bi-password" onClick={isPasswordViewClick}  style={{ display: (passwordView) ? 'inline-block' : 'none' }}></i>
@@ -227,6 +249,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+    </div>  
   );
 }
 

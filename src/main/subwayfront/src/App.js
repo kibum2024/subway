@@ -15,6 +15,7 @@ import Advertisement from 'src/components/content/news/Advertisement';
 import FooterMain from 'src/components/footer/FooterMain';
 import EventHome from 'src/components/content/news/EventHome';
 import EventDetail from 'src/components/content/news/EventDetail';
+import MemberShip from 'src/components/content/store/MemberShip';
 import 'src/App.css';
 
 function Main() {
@@ -42,11 +43,12 @@ function Main() {
                 <Route path="/menu/smilesup" element={<MenuMain pathProp = {"/menu/smilesup" }/>} ></Route> 
                 <Route path="/menu/catering" element={<MenuMain pathProp = {"/menu/catering" }/>} ></Route> 
     
-                <Route path="/news/advertisement" element={<Advertisement pathProp = {"/news/advertisement" }/>} ></Route> 
                 <Route path="/news/event" element={<EventHome pathProp = {"/news/event" }/>} ></Route> 
                 <Route path="/news/event/detail" element={<EventDetail pathProp = {"/news/event/detail" }/>} ></Route> 
+                <Route path="/news/advertisement" element={<Advertisement pathProp = {"/news/advertisement" }/>} ></Route> 
 
                 <Route path="/story/storefind" element={<StoreFind pathProp = {"/story/storefind" }/>} ></Route> 
+                <Route path="/store/membership" element={<MemberShip pathProp = {"/store/membership" }/>} ></Route> 
 
                 {/* <Route path="/menu/main" element={<MenuMain />} ></Route>  */}
                 {/* <Route path="/menu/rap" element={<MenuRap />} ></Route>  */}
