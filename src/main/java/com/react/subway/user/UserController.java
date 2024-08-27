@@ -1,7 +1,10 @@
 package com.react.subway.user;
 
 import com.react.subway.entity.User;
+import com.react.subway.entity.VerificationToken;
+import com.react.subway.user.dto.UserEmailSendRequest;
 import com.react.subway.user.dto.UserLoginRequest;
+import jakarta.mail.MessagingException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -10,7 +13,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -68,5 +73,25 @@ public class UserController {
         // 사용자 정보 처리
         String userInfo = response.getBody();
         return ResponseEntity.ok(userInfo);
+    }
+
+    @PostMapping("/emailsend")
+    public ResponseEntity<String> emailSend(@RequestBody UserEmailSendRequest request) throws MessagingException {
+        userService.sendVerificationEmail(request.getUserEmail());
+        return null;
+    }
+
+    @GetMapping("/verify")
+    public ResponseEntity<String> verifyToken(@RequestParam("token") String token) {
+        boolean isValidToken = userService.getVerificationToken(token);
+
+        if (!isValidToken) {
+            return ResponseEntity.badRequest().body("Invalid token.");
+        }
+
+        // 사용된 토큰 삭제
+        userService.deleteVerificationToken(token);
+
+        return ResponseEntity.ok("Account verified successfully.");
     }
 }
